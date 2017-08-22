@@ -1,0 +1,4 @@
+Bundle-SymbolicName: fpModel
+Bundle-Version: 0.0.1
+Bundle-Name: DBModel
+Require-Bundle: javax.persistence;bundle-version="2.1.0"
