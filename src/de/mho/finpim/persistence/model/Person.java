@@ -20,6 +20,8 @@ public class Person
 	@OneToMany(mappedBy="Account", cascade=CascadeType.ALL)
 	protected List<Account> accounts;
 	
+	protected String pwd;
+	
 	public Person() { }
 	
 	public Person (String name)
@@ -45,6 +47,14 @@ public class Person
 
 	public void setAccounts(List<Account> accounts) {
 		this.accounts = accounts;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	
 	
