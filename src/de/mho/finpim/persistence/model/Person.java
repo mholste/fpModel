@@ -2,10 +2,10 @@ package de.mho.finpim.persistence.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -17,7 +17,8 @@ public class Person
 	
 	protected String name;
 	
-	@OneToMany(mappedBy="Account", cascade=CascadeType.ALL)
+	@OneToMany
+	@JoinColumn(name="accID")
 	protected List<Account> accounts;
 	
 	protected String pwd;
