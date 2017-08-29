@@ -8,11 +8,11 @@
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
         	<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~finpim" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/finpim" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="" />
             
-            <property name="eclipselink.target-database" value="H2" />
+            <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.H2Platform" />
             <property name="eclipselink.jdbc.read-connections.min" value="1" />
             <property name="eclipselink.jdbc.write-connections.min" value="1" />
             <property name="eclipselink.jdbc.batch-writing" value="JDBC" />
