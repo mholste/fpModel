@@ -2,6 +2,7 @@ package de.mho.finpim.persistence.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +16,8 @@ public class Person
 	@GeneratedValue
 	protected int pId; 
 	
-	protected String name;
+	@Column(unique=true, nullable=false)
+	protected String uName;
 	
 	@OneToMany
 	@JoinColumn(name="accID")
@@ -23,15 +25,16 @@ public class Person
 	
 	protected String pwd;
 	
-	public Person() { }
+	protected String fName;
 	
-	public Person (String name)
-	{
-		this.name = name;
+	protected String name;
+	
+	public String getfName() {
+		return fName;
 	}
 
-	public int getpId() {
-		return pId;
+	public void setfName(String fName) {
+		this.fName = fName;
 	}
 
 	public String getName() {
@@ -40,6 +43,25 @@ public class Person
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Person() { }
+	
+	public Person (String name)
+	{
+		this.uName = name;
+	}
+
+	public int getpId() {
+		return pId;
+	}
+
+	public String getUName() {
+		return uName;
+	}
+
+	public void setUName(String name) {
+		this.uName = name;
 	}
 
 	public List<Account> getAccounts() {
