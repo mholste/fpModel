@@ -1,5 +1,6 @@
 package de.mho.finpim.persistence.model;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,28 @@ public class Bank
 	@Column(unique=true)
 	protected String bic;
 	
+	@Basic
+	protected String accessCode;
+	
+	@Basic
+	protected String PIN;
+	
+	public String getAccessCode() {
+		return accessCode;
+	}
+
+	public void setAccessCode(String accessCode) {
+		this.accessCode = accessCode;
+	}
+
+	public String getPIN() {
+		return PIN;
+	}
+
+	public void setPIN(String pIN) {
+		PIN = pIN;
+	}
+
 	public int getBId()
 	{
 		return bId;
