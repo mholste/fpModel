@@ -5,6 +5,7 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>de.mho.finpim.persistence.model.Person</class>
         <class>de.mho.finpim.persistence.model.Account</class>
+        <class>de.mho.finpim.persistence.model.Bank</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
         	<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
