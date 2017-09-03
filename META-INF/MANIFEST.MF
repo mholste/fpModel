@@ -1,7 +1,7 @@
 Bundle-SymbolicName: fpModel
 Bundle-Version: 0.0.1
 Bundle-Name: DBModel
-Require-Bundle: javax.persistence;bundle-version="2.1.1"
+Require-Bundle: javax.persistence
 Export-Package: de.mho.finpim.persistence.model
 Meta-Persistence: META-INF/persistence.xml
 Eclipse-AutoStart: true
