@@ -22,11 +22,17 @@ public class Bank
 	@Column(unique=true)
 	protected String bic;
 	
+	@Column(unique=true, nullable=false)
+	protected String person;
+	
 	@Basic
 	protected String accessCode;
 	
 	@Basic
 	protected String PIN;
+	
+	@Basic
+	protected String location;
 	
 	public String getAccessCode() {
 		return accessCode;
@@ -81,5 +87,11 @@ public class Bank
 		this.location = location;
 	}
 
-	protected String location;
+	public String getPerson() {
+		return person;
+	}
+
+	public void setPerson(String user) {
+		this.person = user;
+	}
 }
