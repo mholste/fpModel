@@ -1,5 +1,6 @@
 package de.mho.finpim.persistence.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -20,8 +21,8 @@ public class Person
 	protected String uName;
 	
 	@OneToMany
-	@JoinColumn(name="accID")
-	protected List<Account> accounts;
+	@JoinColumn(name="bId")
+	protected List<Bank> banks;
 	
 	protected String pwd;
 	
@@ -64,12 +65,19 @@ public class Person
 		this.uName = name;
 	}
 
-	public List<Account> getAccounts() {
-		return accounts;
+	public List<Bank> getBanks() {
+		return banks;
 	}
 
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
+	public void addBank(Bank bank) {
+		if (bank == null)
+		{
+			banks = new ArrayList<Bank>();
+		}
+		if (!this.banks.contains(bank))
+		{
+			this.banks.add(bank);
+		}
 	}
 
 	public String getPwd() {
