@@ -1,10 +1,13 @@
 package de.mho.finpim.persistence.model;
 
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Bank 
@@ -22,8 +25,9 @@ public class Bank
 	@Column(unique=true)
 	protected String bic;
 	
-	@Column(unique=true, nullable=false)
-	protected String person;
+	@ManyToOne(cascade= CascadeType.ALL)
+	@JoinColumn(name = "pId")
+	protected Person person;
 	
 	@Basic
 	protected String accessCode;
@@ -87,11 +91,11 @@ public class Bank
 		this.location = location;
 	}
 
-	public String getPerson() {
+	public Person getPerson() {
 		return person;
 	}
 
-	public void setPerson(String user) {
-		this.person = user;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 }
