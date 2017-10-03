@@ -24,9 +24,9 @@ public class Bank
 	
 	@Column(unique=true)
 	protected String bic;
-	
-	@ManyToOne(cascade= CascadeType.ALL)
-	@JoinColumn(name = "pId")
+		
+	@ManyToOne
+	@JoinColumn(name="person", referencedColumnName="pId")
 	protected Person person;
 	
 	@Basic
@@ -90,7 +90,7 @@ public class Bank
 	public void setLocation(String location) {
 		this.location = location;
 	}
-
+	
 	public Person getPerson() {
 		return person;
 	}

@@ -21,8 +21,9 @@ public class Person
 	@Column(unique=true, nullable=false)
 	protected String uName;
 	
-	@OneToMany
-	@JoinColumn(name="bId")
+	//@JoinColumn(name="bId")
+	
+	@OneToMany (mappedBy="person")	
 	protected List<Bank> banks;
 	
 	protected String pwd;
