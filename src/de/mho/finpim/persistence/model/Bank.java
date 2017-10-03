@@ -16,28 +16,77 @@ public class Bank
 	@GeneratedValue
 	protected int bId;
 	
+	/**
+	 * Name der Bank
+	 */
 	@Column(unique=true, nullable=false)
 	protected String bankName;
 	
+	/**
+	 * Bankleitzahl
+	 */
 	@Column(unique=true, nullable=false)
 	protected String blz;
 	
+	/**
+	 * BIC der Bank
+	 */
 	@Column(unique=true)
 	protected String bic;
 		
+	/**
+	 * Eigentümer der Bankverbindung
+	 */
 	@ManyToOne
 	@JoinColumn(name="person", referencedColumnName="pId")
 	protected Person person;
 	
+	/**
+	 * Zugangscode für die Online-Verbindung
+	 */
 	@Basic
 	protected String accessCode;
 	
+	/**
+	 * PIN für die Online-Verbindung
+	 */
 	@Basic
 	protected String PIN;
 	
+	/**
+	 * Sitz der Bank
+	 */
 	@Basic
 	protected String location;
 	
+	/**
+	 * HBCI-Server der Bank
+	 */
+	@Basic
+	protected String host;
+	
+	/**
+	 * Kunden-Id des Nutzewrs bei der Bank
+	 */
+	@Basic
+	protected String customerId;
+	
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
 	public String getAccessCode() {
 		return accessCode;
 	}
