@@ -36,7 +36,7 @@ public class Account
 	protected String currency;
 	
 	@Basic
-	protected String limit;
+	protected String accLimit;
 	
 	@Basic
 	protected String bic;
@@ -92,12 +92,12 @@ public class Account
 		this.currency = currency;
 	}
 
-	public String getLimit() {
-		return limit;
+	public String getAccLimit() {
+		return accLimit;
 	}
 
-	public void setLimit(String limit) {
-		this.limit = limit;
+	public void setAccLimit(String accLimit) {
+		this.accLimit = accLimit;
 	}
 
 	public String getBic() {
