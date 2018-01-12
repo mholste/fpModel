@@ -15,12 +15,12 @@ public class Account
 	@GeneratedValue
 	protected int accId;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="pId")
+	@ManyToOne
+	@JoinColumn(name="person", referencedColumnName="pId")
 	protected Person person;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="bId")
+	@ManyToOne
+	@JoinColumn(name="bank", referencedColumnName="bId")
 	protected Bank bank;
 	
 	@Basic(optional=false)
