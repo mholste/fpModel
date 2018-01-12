@@ -9,7 +9,7 @@
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
         	<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/finpim" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:/opt/FP/finpim" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="" />
             
@@ -18,9 +18,8 @@
             <property name="eclipselink.jdbc.write-connections.min" value="1" />
             <property name="eclipselink.jdbc.batch-writing" value="JDBC" />
             
-            <!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
-            <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
-            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+            <!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
             <property name="eclipselink.ddl-generation.output-mode" value="database" />
 
             <!-- Logging -->
