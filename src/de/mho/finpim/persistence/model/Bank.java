@@ -18,19 +18,19 @@ public class Bank
 	/**
 	 * Name der Bank
 	 */
-	@Column(unique=true, nullable=false)
+	@Column(nullable=false)
 	protected String bankName;
 	
 	/**
 	 * Bankleitzahl
 	 */
-	@Column(unique=true, nullable=false)
+	@Column(nullable=false)
 	protected String blz;
 	
 	/**
 	 * BIC der Bank
 	 */
-	@Column(unique=true)
+	@Column
 	protected String bic;
 		
 	/**
