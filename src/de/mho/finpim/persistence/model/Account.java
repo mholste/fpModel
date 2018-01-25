@@ -16,10 +16,6 @@ public class Account
 	protected int accId;
 	
 	@ManyToOne
-	@JoinColumn(name="person", referencedColumnName="pId")
-	protected Person person;
-	
-	@ManyToOne
 	@JoinColumn(name="bank", referencedColumnName="bId")
 	protected Bank bank;
 	
@@ -131,15 +127,7 @@ public class Account
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Person getPerson() {
-		return person;
-	}
-
-	public void setPerson(Person person) {
-		this.person = person;
-	}
-
+	
 	public String getAccNo() {
 		return accNo;
 	}
