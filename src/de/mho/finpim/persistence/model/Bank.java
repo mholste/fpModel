@@ -11,10 +11,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Bank 
 {
+	/*
 	@Id
 	@GeneratedValue
 	protected int bId;
-	
+	*/
 	/**
 	 * Name der Bank
 	 */
@@ -30,16 +31,18 @@ public class Bank
 	/**
 	 * BIC der Bank
 	 */
-	@Column
+	@Id
+	@Column(nullable=false)
 	protected String bic;
 		
 	/**
 	 * Eigentümer der Bankverbindung
 	 */
+	/*
 	@ManyToOne
 	@JoinColumn(name="person", referencedColumnName="pId")
 	protected Person person;
-	
+	*/
 	/**
 	 * Zugangscode für die Online-Verbindung
 	 */
@@ -67,6 +70,7 @@ public class Bank
 	/**
 	 * Kunden-Id des Nutzewrs bei der Bank
 	 */
+	/*
 	@Basic
 	protected String customerId;
 	
@@ -77,7 +81,7 @@ public class Bank
 	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
-
+	*/
 	public String getHost() {
 		return host;
 	}
@@ -101,12 +105,12 @@ public class Bank
 	public void setPIN(String pIN) {
 		PIN = pIN;
 	}
-
+	/*
 	public int getBId()
 	{
 		return bId;
 	}
-	
+	*/
 	public String getBankName() {
 		return bankName;
 	}
@@ -138,7 +142,7 @@ public class Bank
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	
+	/*
 	public Person getPerson() {
 		return person;
 	}
@@ -146,4 +150,5 @@ public class Bank
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+	*/
 }

@@ -24,7 +24,10 @@ public class Person
 	//@JoinColumn(name="bId")
 	
 	@OneToMany (mappedBy="person")	
-	protected List<Bank> banks;
+	protected List<Account> accounts;
+	
+	@OneToMany (mappedBy="person")	
+	protected List<CustomerRelation> relations;
 	
 	protected String pwd;
 	
@@ -66,22 +69,37 @@ public class Person
 	public void setUName(String name) {
 		this.uName = name;
 	}
-
-	public List<Bank> getBanks() {
-		return banks;
+	
+	public List<Account> getAccounts() {
+		return accounts;
 	}
 
-	public void addBank(Bank bank) {
-		if (bank == null)
+	public void addAccount(Account account) {
+		if (accounts == null)
 		{
-			banks = new ArrayList<Bank>();
+			accounts = new ArrayList<Account>();
 		}
-		if (!this.banks.contains(bank))
+		if (!this.accounts.contains(account))
 		{
-			this.banks.add(bank);
+			this.accounts.add(account);
 		}
 	}
+	
+	public List<CustomerRelation> getCustomerRelations() {
+		return relations;
+	}
 
+	public void addCustomerRelation(CustomerRelation relation) {
+		if (relations == null)
+		{
+			relations = new ArrayList<CustomerRelation>();
+		}
+		if (!this.relations.contains(relation))
+		{
+			this.relations.add(relation);
+		}
+	}
+	
 	public String getPwd() {
 		return pwd;
 	}

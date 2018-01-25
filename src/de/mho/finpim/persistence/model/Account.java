@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Account 
@@ -15,9 +16,13 @@ public class Account
 	@GeneratedValue
 	protected int accId;
 	
-	@ManyToOne
-	@JoinColumn(name="bank", referencedColumnName="bId")
+	@OneToOne
+	@JoinColumn(name="BANK", referencedColumnName="BIC")
 	protected Bank bank;
+	
+	@ManyToOne
+	@JoinColumn(name="PERSON", referencedColumnName="pId")
+	protected Person person;
 	
 	@Basic(optional=false)
 	protected String accNo;
@@ -146,6 +151,14 @@ public class Account
 
 	public int getAccId() {
 		return accId;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 	
 }
