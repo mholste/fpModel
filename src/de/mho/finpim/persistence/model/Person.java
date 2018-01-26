@@ -35,19 +35,23 @@ public class Person
 	
 	protected String name;
 	
-	public String getfName() {
+	public String getfName() 
+	{
 		return fName;
 	}
 
-	public void setfName(String fName) {
+	public void setfName(String fName) 
+	{
 		this.fName = fName;
 	}
 
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 
@@ -58,23 +62,28 @@ public class Person
 		this.uName = name;
 	}
 
-	public int getpId() {
+	public int getpId() 
+	{
 		return pId;
 	}
 
-	public String getUName() {
+	public String getUName() 
+	{
 		return uName;
 	}
 
-	public void setUName(String name) {
+	public void setUName(String name) 
+	{
 		this.uName = name;
 	}
 	
-	public List<Account> getAccounts() {
+	public List<Account> getAccounts() 
+	{
 		return accounts;
 	}
 
-	public void addAccount(Account account) {
+	public void addAccount(Account account) 
+	{
 		if (accounts == null)
 		{
 			accounts = new ArrayList<Account>();
@@ -85,11 +94,25 @@ public class Person
 		}
 	}
 	
-	public List<CustomerRelation> getCustomerRelations() {
+	public List<CustomerRelation> getCustomerRelations() 
+	{
 		return relations;
 	}
 
-	public void addCustomerRelation(CustomerRelation relation) {
+	public CustomerRelation getCustomerRelation(Bank b) 
+	{
+		for (CustomerRelation cr : relations)
+		{
+			if (cr.getBank().equals(b))
+			{
+				return cr;
+			}
+		}		
+		return null;
+	}
+	
+	public void addCustomerRelation(CustomerRelation relation) 
+	{
 		if (relations == null)
 		{
 			relations = new ArrayList<CustomerRelation>();
@@ -100,13 +123,13 @@ public class Person
 		}
 	}
 	
-	public String getPwd() {
+	public String getPwd() 
+	{
 		return pwd;
 	}
 
-	public void setPwd(String pwd) {
+	public void setPwd(String pwd) 
+	{
 		this.pwd = pwd;
-	}
-	
-	
+	}	
 }
