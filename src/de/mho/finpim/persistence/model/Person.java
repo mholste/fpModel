@@ -3,6 +3,7 @@ package de.mho.finpim.persistence.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,10 +24,10 @@ public class Person
 	
 	//@JoinColumn(name="bId")
 	
-	@OneToMany (mappedBy="person")	
+	@OneToMany (mappedBy="person", cascade=CascadeType.PERSIST)	
 	protected List<Account> accounts;
 	
-	@OneToMany (mappedBy="person")	
+	@OneToMany (mappedBy="person", cascade=CascadeType.PERSIST)	
 	protected List<CustomerRelation> relations;
 	
 	protected String pwd;
@@ -92,6 +93,7 @@ public class Person
 		{
 			this.accounts.add(account);
 		}
+		account.setPerson(this);
 	}
 	
 	public List<CustomerRelation> getCustomerRelations() 
@@ -121,6 +123,7 @@ public class Person
 		{
 			this.relations.add(relation);
 		}
+		relation.setPerson(this);
 	}
 	
 	public String getPwd() 
