@@ -6,6 +6,7 @@
         <class>de.mho.finpim.persistence.model.Person</class>
         <class>de.mho.finpim.persistence.model.Account</class>
         <class>de.mho.finpim.persistence.model.Bank</class>
+        <class>de.mho.finpim.persistence.model.CustomerRelation</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
         	<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
@@ -19,7 +20,7 @@
             <property name="eclipselink.jdbc.batch-writing" value="JDBC" />
             
             <property name="eclipselink.ddl-generation" value="create-tables" />
-            <!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+            >1-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
             <property name="eclipselink.ddl-generation.output-mode" value="database" />
 
             <!-- Logging -->
