@@ -22,12 +22,10 @@ public class Person
 	@Column(unique=true, nullable=false)
 	protected String uName;
 	
-	//@JoinColumn(name="bId")
-	
-	@OneToMany (mappedBy="person", cascade=CascadeType.PERSIST)	
+	//@OneToMany (mappedBy="person", cascade=CascadeType.ALL)	
 	protected List<Account> accounts;
 	
-	@OneToMany (mappedBy="person", cascade=CascadeType.PERSIST)	
+	//@OneToMany (mappedBy="person", cascade=CascadeType.ALL)	
 	protected List<CustomerRelation> relations;
 	
 	protected String pwd;

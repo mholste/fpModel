@@ -59,8 +59,13 @@ public class CustomerRelation
 		return person;
 	}
 
-	public void setPerson(Person person) {
+	public void setPerson(Person person) 
+	{
 		this.person = person;
+		if (!person.getCustomerRelations().contains(this))
+		{
+			person.addCustomerRelation(this);
+		}
 	}
 
 	public String getAccessCode() {
