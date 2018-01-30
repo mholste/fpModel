@@ -3,19 +3,11 @@ package de.mho.finpim.persistence.model;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Bank 
 {
-	/*
-	@Id
-	@GeneratedValue
-	protected int bId;
-	*/
 	/**
 	 * Name der Bank
 	 */
@@ -35,14 +27,6 @@ public class Bank
 	@Column(nullable=false)
 	protected String bic;
 		
-	/**
-	 * Eigentümer der Bankverbindung
-	 */
-	/*
-	@ManyToOne
-	@JoinColumn(name="person", referencedColumnName="pId")
-	protected Person person;
-	*/
 	/**
 	 * Zugangscode für die Online-Verbindung
 	 */
@@ -70,18 +54,7 @@ public class Bank
 	/**
 	 * Kunden-Id des Nutzewrs bei der Bank
 	 */
-	/*
-	@Basic
-	protected String customerId;
 	
-	public String getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
-	*/
 	public String getHost() {
 		return host;
 	}
@@ -105,12 +78,7 @@ public class Bank
 	public void setPIN(String pIN) {
 		PIN = pIN;
 	}
-	/*
-	public int getBId()
-	{
-		return bId;
-	}
-	*/
+	
 	public String getBankName() {
 		return bankName;
 	}
@@ -142,13 +110,4 @@ public class Bank
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	/*
-	public Person getPerson() {
-		return person;
-	}
-
-	public void setPerson(Person person) {
-		this.person = person;
-	}
-	*/
 }
