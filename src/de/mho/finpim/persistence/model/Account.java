@@ -51,8 +51,18 @@ public class Account
 	protected String name;
 	
 	@Basic	
-	protected long balance;
+	protected String balance;
 	
+	protected String requestTime;;
+	
+	public String getRequestTime() {
+		return requestTime;
+	}
+
+	public void setRequestTime(String requestTime) {
+		this.requestTime = requestTime;
+	}
+
 	public Account() { }
 	
 	public Account(String accNo)
@@ -140,11 +150,11 @@ public class Account
 		this.accNo = accNo;
 	}
 
-	public long getBalance() {
+	public String getBalance() {
 		return balance;
 	}
 
-	public void setBalance(long balance) {
+	public void setBalance(String balance) {
 		this.balance = balance;
 	}
 
