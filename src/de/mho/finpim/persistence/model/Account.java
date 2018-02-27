@@ -1,5 +1,7 @@
 package de.mho.finpim.persistence.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -53,13 +55,13 @@ public class Account
 	@Basic	
 	protected String balance;
 	
-	protected String requestTime;;
+	protected LocalDateTime requestTime;;
 	
-	public String getRequestTime() {
+	public LocalDateTime getRequestTime() {
 		return requestTime;
 	}
 
-	public void setRequestTime(String requestTime) {
+	public void setRequestTime(LocalDateTime requestTime) {
 		this.requestTime = requestTime;
 	}
 
