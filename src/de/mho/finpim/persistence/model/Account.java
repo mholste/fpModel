@@ -76,7 +76,7 @@ public class Account
 	
 	/** Kontostand */
 	@Basic	
-	protected long balance;
+	protected String balance;
 	
 	/** Zeitpunk der letzten Kontoabfrage */
 	@Basic
@@ -177,11 +177,11 @@ public class Account
 		this.accNo = accNo;
 	}
 
-	public long getBalance() {
+	public String getBalance() {
 		return balance;
 	}
 
-	public void setBalance(long balance) {
+	public void setBalance(String balance) {
 		this.balance = balance;
 	}
 
