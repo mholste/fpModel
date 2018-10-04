@@ -10,6 +10,17 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+/**
+ * Das Geschäftsobjekt Account repräsentiert ein Bankkonto mit den dazugehörigen
+ * Eigenschaften und Methoden.
+ * Allehier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
+ * 
+ * @author Michael Holste
+ * 
+ * @version 1.0
+ * 
+ *
+ */
 @Entity
 public class Account 
 {
@@ -17,45 +28,61 @@ public class Account
 	@GeneratedValue
 	protected int accId;
 	
+	/** Kontoführende Bank */
 	@OneToOne
 	@JoinColumn(name="BANK", referencedColumnName="BIC")
 	protected Bank bank;
 	
+	/** Kontoinhaber*/
 	@ManyToOne
 	@JoinColumn(name="PERSON", referencedColumnName="pId")
 	protected Person person;
 	
+	/** Kontonummer */
 	@Basic(optional=false)
 	protected String accNo;
 	
+	/** Art des Kontos */
 	@Basic
 	protected String type;
 	
+	/** IBAN des Kontos */ 
 	@Basic
 	protected String iban;
 	
+	/** Währung des Kontos */ 
 	@Basic
 	protected String currency;
 	
+	/** Überziehungsgrenze */
 	@Basic
 	protected String accLimit;
 	
+	/** BIC des Kontos */
 	@Basic
 	protected String bic;
 	
+	/** Bankleitzahl des Kontos */
 	@Basic
 	protected String blz;
 	
+	/** Land,in dem das Konto geführt wird*/
 	@Basic
 	protected String country;
 	
+	/** Name des Kontos (frei wählbar */
 	@Basic
 	protected String name;
 	
+	/** Kontostand */
 	@Basic	
-	protected String balance;
+	protected long balance;
 	
-	protected LocalDateTime requestTime;;
+	/** Zeitpunk der letzten Kontoabfrage */
+	@Basic
+	protected LocalDateTime requestTime;
+	
+	public Account() { }
 	
 	public LocalDateTime getRequestTime() {
 		return requestTime;
@@ -65,8 +92,6 @@ public class Account
 		this.requestTime = requestTime;
 	}
 
-	public Account() { }
-	
 	public Account(String accNo)
 	{
 		this.accNo = accNo;
@@ -152,11 +177,11 @@ public class Account
 		this.accNo = accNo;
 	}
 
-	public String getBalance() {
+	public long getBalance() {
 		return balance;
 	}
 
-	public void setBalance(String balance) {
+	public void setBalance(long balance) {
 		this.balance = balance;
 	}
 
