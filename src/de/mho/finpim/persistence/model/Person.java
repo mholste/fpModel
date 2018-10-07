@@ -8,6 +8,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Das Geschäftsobjekt Person stellt einen Kunden dar, der Geschöftsbeziehungen 
+ * zu einer oder mehreren Banken hält und dort eins oder mehrere Konten hält. 
+ * Das Objekt Person ist ebenfalls ein Nutzer in dieser Applikation. 
+ * 
+ * Alle hier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
+ * 
+ * @author Michael Holste
+ * 
+ * @version 1.0
+ * 
+ */
 @Entity
 public class Person   
 {
