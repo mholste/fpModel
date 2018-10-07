@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 /**
  * Das Geschäftsobjekt Account repräsentiert ein Bankkonto mit den dazugehörigen
  * Eigenschaften und Methoden.
- * Allehier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
+ * Alle hier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
  * 
  * @author Michael Holste
  * 
