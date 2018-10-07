@@ -5,6 +5,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * Das Geschäftsobjekt Bank repräsentiert eine Bank an einem entsprechendem Ort. 
+ * Hier wird dieses Objekt mit den entsprechenden, die Bank repräsentierenden 
+ * Eigenschaften geführt, zusätzlich werden die Eigenschaften für den Onlinezugang
+ * gehalten. 
+ * 
+ * Alle hier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
+ * 
+ * @author Michael Holste
+ * 
+ * @version 1.0
+ * 
+ *
+ */
 @Entity
 public class Bank 
 {
@@ -52,7 +66,7 @@ public class Bank
 	protected String host;
 	
 	/**
-	 * Kunden-Id des Nutzewrs bei der Bank
+	 * Kunden-Id des Nutzers bei der Bank
 	 */
 	
 	public String getHost() {
