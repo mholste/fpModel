@@ -8,6 +8,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+/**
+ * Das künstliche Geschäftsobjekt CustomerRelation repräsentiert die Beziehung 
+ * eines Kunden zu einer Bank, bei der ein Kunde nur einen Zugang aber mehrere 
+ * Konten haben kann. 
+ * Entsprechend führt dieses Objekt den Zugang eines Kunden zu einer Bank. 
+ * 
+ * Alle hier verwendeten Eigenschaften besitzen entsprechende Getter und Setter. 
+ * 
+ * @author Michael Holste
+ * 
+ * @version 1.0
+ * 
+ *
+ */
 @Entity
 public class CustomerRelation 
 {
