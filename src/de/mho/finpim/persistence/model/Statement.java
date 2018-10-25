@@ -17,7 +17,7 @@ public class Statement
 	/** Konto der Buchung*/
 	@OneToOne
 	@JoinColumn(name="Account", referencedColumnName="IBAN")
-	protected Bank bank;
+	protected Account account;
 	
 	/** Buchungsdatum */
 	@Basic
@@ -51,14 +51,14 @@ public class Statement
 	@Basic 
 	protected String instituteReference;
 
-	public Bank getBank() {
-		return bank;
+	public Account getAccount() {
+		return account;
 	}
 
-	public void setBank(Bank bank) {
-		this.bank = bank;
+	public void setAccount(Account account) {
+		this.account = account;
 	}
-
+	
 	public int getDate() {
 		return Date;
 	}
