@@ -3,6 +3,7 @@ package de.mho.finpim.persistence.model;
 import java.time.LocalDateTime;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -48,6 +49,7 @@ public class Account
 	
 	/** IBAN des Kontos */ 
 	@Basic
+	@Column(nullable=false)
 	protected String iban;
 	
 	/** Währung des Kontos */ 
