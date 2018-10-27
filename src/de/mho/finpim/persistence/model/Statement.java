@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import java.util.Date;
 
 @Entity
 public class Statement 
@@ -21,7 +22,7 @@ public class Statement
 	
 	/** Buchungsdatum */
 	@Basic
-	protected int Date;
+	protected Date date;
 	
 	/** Saldo nach Buchung */
 	@Basic
@@ -37,7 +38,7 @@ public class Statement
 	
 	/** Datum der Wertstellung */
 	@Basic 
-	protected String valuta;
+	protected Date valuta;
 	
 	/** Bankgebühren */
 	@Basic
@@ -59,12 +60,12 @@ public class Statement
 		this.account = account;
 	}
 	
-	public int getDate() {
-		return Date;
+	public Date getDate() {
+		return this.date;
 	}
 
-	public void setDate(int date) {
-		Date = date;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public String getBalance() {
@@ -91,11 +92,11 @@ public class Statement
 		this.value = value;
 	}
 
-	public String getValuta() {
+	public Date getValuta() {
 		return valuta;
 	}
 
-	public void setValuta(String valuta) {
+	public void setValuta(Date valuta) {
 		this.valuta = valuta;
 	}
 
