@@ -6,9 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
 import java.util.Date;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(name = "IDENT", columnNames = {"DATE","USAGE","VALUE"}))
 public class Statement 
 {
 	@Id
