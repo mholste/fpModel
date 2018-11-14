@@ -19,7 +19,7 @@ import javax.persistence.OneToOne;
  * @author Michael Holste
  * 
  * @version 1.0
- * 
+ *   
  *
  */
 @Entity

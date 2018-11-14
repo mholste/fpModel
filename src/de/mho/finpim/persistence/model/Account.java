@@ -20,7 +20,7 @@ import javax.persistence.OneToOne;
  * 
  * @version 1.0
  * 
- *dd
+ *
  */
 @Entity
 public class Account 
