@@ -12,7 +12,7 @@ import javax.persistence.UniqueConstraint;
 import java.util.Date;
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(name = "IDENT", columnNames = {"DATE","USAGE","VALUE"}))
+@Table(uniqueConstraints = @UniqueConstraint(name = "IDENT", columnNames = {"BALANCE","VALUTA","VALUE"}))
 public class Statement 
 {
 	@Id
