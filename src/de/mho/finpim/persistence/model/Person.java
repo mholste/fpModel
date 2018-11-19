@@ -18,7 +18,7 @@ import javax.persistence.Id;
  * @author Michael Holste
  * 
  * @version 1.0
- * 
+ *   
  */
 @Entity
 public class Person   
